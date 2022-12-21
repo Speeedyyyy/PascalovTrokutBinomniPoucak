@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Numerics;
 
 namespace PascalovTrokutBinomniPoucak
 {
@@ -26,14 +22,14 @@ namespace PascalovTrokutBinomniPoucak
             return res;
         }
 
-        private long BinomialCoefficient(int n, int k)
+        private BigInteger BinomialCoefficient(int n, int k)
         {
             return Factorial(n) / (Factorial(k) * Factorial(n - k));
         }
 
-        private long Factorial(int n)
+        private BigInteger Factorial(int n)
         {
-            int res = 1;
+            BigInteger res = 1;
             for(int i = 2; i <= n; i++)
             {
                 res *= i;

@@ -3,6 +3,10 @@
 Console.OutputEncoding = System.Text.Encoding.Unicode;
 while (true)
 {
+    // Ovaj dio je zbog nekog cudnog buga koji se pojavi kad se vratis iz nekog moda.
+    Console.Clear();
+    Console.WriteLine("Clear");
+
     Console.Clear();
     Console.WriteLine(" [1] Pascalov Trokut");
     Console.WriteLine(" [2] Binomni Poučak");
@@ -79,7 +83,7 @@ while (true)
                 redo = false;
                 BinomialTheorem binomialTheorem = new BinomialTheorem(n);
                 Console.WriteLine(binomialTheorem.Calculate());
-                Console.WriteLine("[Esc] Povratak na Izbornik  [R] Ponovi sa drugačijim n");
+                Console.WriteLine("\n[Esc] Povratak na Izbornik  [R] Ponovi sa drugačijim n");
             }
             ConsoleKey consoleKey = Console.ReadKey().Key;
             if(consoleKey == ConsoleKey.R)
