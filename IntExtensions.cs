@@ -1,7 +1,9 @@
-﻿namespace PascalovTrokutBinomniPoucak
+﻿// Postavljamo klasu u zajednički namespace PascalovTrokutBinomniPoucak kako bi se mogla koristiti u programu
+namespace PascalovTrokutBinomniPoucak
 {
     public static class IntExtensions
     {
+        // Eksetenzija koja se u programu koristi za pretvaranje broja u odgovarajuću potenciju
         public static string ToSuperscript(this int number)
         {
             if (number == 1)
