@@ -17,6 +17,10 @@ namespace PascalovTrokutBinomniPoucak
         // Metoda za izračunavanje formule binoma potenciranog na n
         public string Calculate()
         {
+            if(n == 0)
+            {
+                return $"(x + y){n.ToSuperscript()} = 1";
+            }
             // Deklarira se string koji će se slati za ispis u program
             string res = $"(x + y){n.ToSuperscript()} = x{n.ToSuperscript()}";
             for(int i = 1; i < n; i++)
